@@ -1,10 +1,24 @@
 <div ng-app="Pokemon" ng-controller="PokeCtrl">
-  <form ng-submit="getPokemon()">
-    <label for="id">Type a number 1-150</label>
-    <input type="text ng-model="pokemonId">
-    <input type="submit" value="Get Pokemon">
-  </form>
-	<div ng-show="pokemon">
-	{{pokemon}}
-	</div>
+  <div class="container">
+    <div class="jumbotron">
+      <h1><image style="height: 60px; display: inline-block; margin-right: 10px; position: relative; top: -5px;" src="https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG"/>Pokédex</h1>
+      <form ng-submit="getPokemon()">
+        <div class="row" style="padding-top: 20px;">
+          <div class="col-xs-5">
+            <input placeholder="Type a number 1-150" class="form-control" type="text" ng-model="pokemonId">
+          </div>
+          <div class="col-xs-4">
+            <input class="btn btn-primary" type="submit" value="Get Pokemon">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="panel panel-danger" ng-show="pokemon">
+      <!-- <div class="panel-heading"></div> -->
+      <div class="panel-body">
+        {{pokemon}}
+      </div>
+    </div>
+  </div>
 </div>
