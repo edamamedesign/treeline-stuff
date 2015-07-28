@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "machinepack-pokemon": "1.3.0"
+    "machinepack-http": "2.3.0"
   },
   "machinepack": {
     "machines": []

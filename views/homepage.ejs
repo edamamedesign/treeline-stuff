@@ -14,11 +14,12 @@
       </form>
     </div>
 
-    <div class="panel panel-danger" ng-show="pokemon">
-      <!-- <div class="panel-heading"></div> -->
-      <div class="panel-body">
-        {{pokemon}}
-      </div>
+    <div ng-show="pokemon">
+      <h1> <img ng-src="{{pokemon.imageUrl}}" />{{pokemon.pokemonName}}</h1>
+      <h2>Moves</h2>
+      <p><span ng-repeat="move in pokemon.moves">{{move.name}}</span></p>
+      <h2>Description</h2>
+      <p>{{pokemon.description}}</P>
     </div>
   </div>
 </div>
